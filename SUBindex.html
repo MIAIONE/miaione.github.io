@@ -15,17 +15,14 @@ function deleteDiv(ele){
 }
 </script>
 	<script type="text/javascript">
- 2     var system ={};  
- 3        var p = navigator.platform;       
- 4        system.win = p.indexOf("Win") == 0;  
- 5        system.mac = p.indexOf("Mac") == 0;  
- 6        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
- 7        if(system.win||system.mac||system.xll){//如果是电脑跳转到
- 8                 alert("SUBindex.html");  
- 9        }else{  //如果是手机,跳转到
-10               alert("SUBMindex.html");    
-11        }
-12 </script>
+try{
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href="SUBMindex.html";
+    }else{
+        window.location.href="SUBindex.html";
+    }
+}catch(e){}
+</script>
 	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 <script type="text/javascript">
    $youziku.load("body", "2e670eca84f84cca9c3bae835ae47315", "MicrosoftJhengHei");
