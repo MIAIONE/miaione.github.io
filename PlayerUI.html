@@ -1,9 +1,27 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
      <font color="white">
     <title>MIAIONE 动画</title>
     <head>
-       
+        <script type="text/javascript">
+        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+            window.location.href = '//www.bilibili.com/blackboard/html5mobileplayer.html' + window.location.search;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="//player.bilibili.com/main/libs/jquery.mCustomScrollbar.min.css">
+    <script type="text/javascript" src="//player.bilibili.com/main/libs/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="//player.bilibili.com/main/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="//player.bilibili.com/main/html5/outer/liteplayer.min.js"></script>
+    <script src="//player.bilibili.com/tools/player-selector/player-selector.min.js"></script>
+    <style type="text/css">
+    html, body, .player {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    </style>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="UI.CSS"/>
@@ -62,43 +80,7 @@ function deleteDiv(ele){
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
-
-    <script type="text/javascript">
-        if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
-            window.location.href = '//www.bilibili.com/blackboard/html5mobileplayer.html' + window.location.search;
-        }
-    </script>
-    <link rel="stylesheet" type="text/css" href="//player.bilibili.com/main/libs/jquery.mCustomScrollbar.min.css">
-    <script type="text/javascript" src="//player.bilibili.com/main/libs/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="//player.bilibili.com/main/libs/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="//player.bilibili.com/main/html5/outer/liteplayer.min.js"></script>
-    <script src="//player.bilibili.com/tools/player-selector/player-selector.min.js"></script>
-    <style type="text/css">
-    html, body, .player {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    </style>
-</head>
-<body>
-    <div class="player">
-        <div id="bilibiliPlayer"></div>
-    </div>
-
-<script type="text/javascript">
-var config = {
-    defaulth5: true,
-    id: 'bilibiliPlayer',
-    wrapClass: '.player',
-    search: ['aid', 'cid', 'autoplay', 'high_quality', 'ptype', 'danmaku', 'as_wide', 'player_type', 'pre_ad', 'lastplaytime', 'enable_ssl', 'enable_ssl_resolve', 'enable_ssl_stream', 'extra_params', 'seasonId', 'episodeId', 'season_type', 'pb', 'last_ep_id', 'has_next', 'page', 'b', 'p', 't', 'd'], // 所有可能传入参数key
-    flashUrl: '//player.bilibili.com/main/flash/outer/miniloader.swf', // flash播放器
-    NewHtmlPlayer: bilibiliPlayer // h5播放器构造函数
-}
-var playerSelector = new PlayerSelector(config)
-</script>
+<iframe src="//player.bilibili.com/player.html?aid=42657310&cid=74833421&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
     <br>
     <br>
