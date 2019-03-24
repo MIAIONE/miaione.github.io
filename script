@@ -1,0 +1,9 @@
+<script type="text/javascript">
+try{
+    if (/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href="SUBM.html";
+    }else{
+        window.location.href="SUB.html";
+    }
+}catch(e){}
+</script>
