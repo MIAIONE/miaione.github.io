@@ -2,51 +2,42 @@
 <html>
 <head>
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="baidu-site-verification" content="7RnsMSS3aU" />
-<title>MIAIONE Blog|API</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="baidu-site-verification" content="7RnsMSS3aU" />
+    <title>MIAIONE Blog|API</title>
+</head>
 <script SRC="/JavaScriptEX/GetURL.JS" TYPE="text/JavaScript"></script>   
 <script SRC="/JavaScriptEX/GetJson.JS" TYPE="text/JavaScript"></script> 
 <script src="/JavaScriptEX/jquery-3.4.1.min.js"></script>  
 <script type="text/javascript">
-window.onload=function(){
+window.onload=function(APIDATA){
         var id = request('id');
         var ua = request('void');
         var xmlhttp =new XMLHttpRequest();
-        if(id=='bvid'){
-            
+        if(id=='bvid'){            
             xmlhttp.onreadystatechange=function()
 	       {
 		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-                     
-           return GetJsonValue(JSON.parse(xmlhttp.responseText),'avid');
-        
+		{                    
+           var aps= GetJsonValue(JSON.parse(xmlhttp.responseText),'avid');   
+           document.write(aps);    
 		}
            }
            xmlhttp.open("GET","https://fachep.com/api/convert.php?bvid="+ua,true);
 	        xmlhttp.send();
         }else if(id=='avid'){
-            
-
 	        xmlhttp.onreadystatechange=function()
 	       {
 		if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-            return GetJsonValue(JSON.parse(xmlhttp.responseText),'bvid');
-            
+            var aps=  GetJsonValue(JSON.parse(xmlhttp.responseText),'bvid');
+            document.write(aps);           
 		}
 	       }
            xmlhttp.open("GET","https://fachep.com/api/convert.php?avid="+ua,true);
 	        xmlhttp.send();
-        }
-        
-  
+        } 
 }
 </script>
-</head>
-<body>     
- 
-</body>
 </html>
