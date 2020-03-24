@@ -120,7 +120,7 @@
     function bjax() {
         return new Promise((resolve, reject) => {
             let ajax = new XMLHttpRequest()
-            ajax.open('GET', 'http://lovebridge.migu.cn:18188/api/map?url=http:%2F%2Fgarnetcdn.migu.cn%2Flovebridge.html', 'true')
+            ajax.open('GET', '//lovebridge.migu.cn:18188/api/map?url=http:%2F%2Fgarnetcdn.migu.cn%2Flovebridge.html', 'true')
             ajax.send()
             ajax.onreadystatechange = function (r) {
                 if (ajax.readyState === 4) {
