@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="icon" href="https://miaione.github.io/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://miaione.github.io/favicon.ico" type="image/x-icon" />
+<meta name="baidu-site-verification" content="7RnsMSS3aU" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIAIONE Blog|API</title>
+<script SRC="https://miaione.github.io/JavaScriptEX/GetURL.JS" TYPE="text/JavaScript"></script>   
+<script SRC="https://miaione.github.io/JavaScriptEX/GetJson.JS" TYPE="text/JavaScript"></script>   
+    <script type="text/javascript">
+       window.onload= function () {
+                var BV = request('BV');
+                var XMLR = new XMLHttpRequest();
+                var BVID;
+                var BVLINK='https://api.bilibili.com/x/web-interface/view?bvid='+BV
+                XMLR.open('GET',BLINK);
+                XMLR.send();
+                XMLR.onreadystatechange = function(){
+                    
+                if (ajax.readyState === 4) {
+                if (ajax.status === 200) {                
+                   BVID=GetJsonValue(XMLR.response,'aid');
+                   
+                                          }
+                                    }
+                }
+                
+            }    
+            
+    </script>
+    </head>
+   <body>      
+   </body>
+</html>
