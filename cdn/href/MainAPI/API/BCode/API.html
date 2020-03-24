@@ -1,37 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-<link rel="icon" href="https://miaione.github.io/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="https://miaione.github.io/favicon.ico" type="image/x-icon" />
+<head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <meta name="baidu-site-verification" content="7RnsMSS3aU" />
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MIAIONE Blog|API</title>
-<script SRC="https://miaione.github.io/JavaScriptEX/GetURL.JS" TYPE="text/JavaScript"></script>   
-<script SRC="https://miaione.github.io/JavaScriptEX/GetJson.JS" TYPE="text/JavaScript"></script>   
-    <script type="text/javascript">
-       window.onload= function () {
-                var BV = request('BV');
-                var XMLR = new XMLHttpRequest();
-                var BVID;
-                var BVLINK='https://api.bilibili.com/x/web-interface/view?bvid='+BV
-                XMLR.open('GET',BLINK);
-                XMLR.send();
-                XMLR.onreadystatechange = function(){
-                    
-                if (ajax.readyState === 4) {
-                if (ajax.status === 200) {                
-                   BVID=GetJsonValue(XMLR.response,'aid');
-                   
-                                          }
-                                    }
-                }
-                
-            }    
+<script SRC="/JavaScriptEX/GetURL.JS" TYPE="text/JavaScript"></script>   
+<script SRC="/JavaScriptEX/GetJson.JS" TYPE="text/JavaScript"></script> 
+<script src="/JavaScriptEX/jquery-3.4.1.min.js"></script>  
+<script type="text/javascript">
+window.onload=function(){
+        var id = request('id');
+        var ua = request('void');
+        var xmlhttp =new XMLHttpRequest();
+        if(id=='bvid'){
             
-    </script>
-    </head>
-   <body>      
-   </body>
+            xmlhttp.onreadystatechange=function()
+	       {
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+                     
+           return GetJsonValue(JSON.parse(xmlhttp.responseText),'avid');
+        
+		}
+           }
+           xmlhttp.open("GET","https://fachep.com/api/convert.php?bvid="+ua,true);
+	        xmlhttp.send();
+        }else if(id=='avid'){
+            
+
+	        xmlhttp.onreadystatechange=function()
+	       {
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+            return GetJsonValue(JSON.parse(xmlhttp.responseText),'bvid');
+            
+		}
+	       }
+           xmlhttp.open("GET","https://fachep.com/api/convert.php?avid="+ua,true);
+	        xmlhttp.send();
+        }
+        
+  
+}
+</script>
+</head>
+<body>     
+ 
+</body>
 </html>
