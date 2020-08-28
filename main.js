@@ -2,6 +2,24 @@
  * Created by Noisky on 17/05/13.
  * Revised by Noisky on 19/09/10.
  */
+function Orderprocessing1(){
+    var vid = document.getElementById("bgMusic");
+    //获取音频对象
+   // var start = 0;
+    //定义循环bai的变量du
+ //   var times=3;
+    //定于循环的次数 zhi
+    vid.addEventListener("ended",function() {
+        vid.play();
+        //启动音频，也就是播放
+    // start++;
+        //循环
+     //  start == times && vid.pause();
+        //也就是当循环的变量等于次数的时候，就会终止循环并且关掉音频
+    });
+    vid.play();
+    //启动音频，用于第一次启动
+}
 $(document).ready(function () {
     /**
      * 随机获取背景图片
