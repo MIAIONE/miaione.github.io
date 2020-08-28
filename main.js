@@ -4,7 +4,7 @@
  */
 
 $(document).ready(
-    function (){
+    function BGMP(){
         var vid = document.getElementById("bgMusic");
         //获取音频对象
        // var start = 0;
@@ -22,7 +22,7 @@ $(document).ready(
         vid.play();
         //启动音频，用于第一次启动
     },
-    function () {
+    function BGIM() {
     /**
      * 随机获取背景图片
      */
