@@ -2,4 +2,6 @@ magnet:?xt=urn:btih:24c4cba84ae4b0ee4ca90fa74e3304711c84e5ed
 
 magnet:?xt=urn:btih:b9b9b0cff2e2089987bc23f014b3f4c5ff946be4
 
+magnet:?xt=urn:btih:9BF70F9E1170CBF6DA9A5ECFFD04B70644802CD5&dn=cn_windows_10_consumer_editions_version_20h2_x64_dvd_d4f7a83e.iso&xl=6044921856
+
 
