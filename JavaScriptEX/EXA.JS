@@ -11,8 +11,8 @@
     SliderCaptcha.VERSION = '1.0';
     SliderCaptcha.Author = 'MIAIONE@YEAH.NET';
     SliderCaptcha.DEFAULTS = {
-        width: 960,     // canvas宽度
-        height: 640,    // canvas高度
+        width: 320,     // canvas宽度
+        height: 160,    // canvas高度
         PI: Math.PI,
         sliderL: 42,    // 滑块边长
         sliderR: 9,     // 滑块半径
