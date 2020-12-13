@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>V2RAY节点获取</title>
+    <script language="javascript" type="text/javascript" src="1.9.0/jquery.js"></script>
+  </head>
+  <body>
+    <div id="new"></div>
+  </body>
+  <script type="text/javascript">
+    $(function(){
+    $.get('https://bulink.xyz/api/subscribe/?token=xyaad&sub_type=vmess',function(ret){
+    document.getElementById("new").innerText=ret
+    });});
+  <script>
+</html>
